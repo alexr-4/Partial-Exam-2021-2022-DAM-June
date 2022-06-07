@@ -39,8 +39,7 @@ public abstract class GameViewModel extends ViewModel {
 
     protected void increaseLevel(){
         int currentLevel = getCurrentLevel();
-        PreferencesProvider.providePreferences().edit()
-                .putInt("current_level", currentLevel + 1 ).apply();
+        PreferencesProvider.providePreferences().edit().putInt("current_level", currentLevel + 1 ).apply();
         Log.d(TAG, "Stored the progress in the Shared Prfrerences...");
         Log.d(TAG, "Level: " + (currentLevel + 1));
     }
@@ -96,4 +95,5 @@ public abstract class GameViewModel extends ViewModel {
         this.progress = progress;
     }
 
+    protected abstract double getSolution();
 }

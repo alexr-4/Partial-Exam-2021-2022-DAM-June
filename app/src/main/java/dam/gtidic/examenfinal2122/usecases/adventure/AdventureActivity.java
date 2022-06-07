@@ -14,6 +14,9 @@ import androidx.lifecycle.ViewModelProvider;
 import dam.gtidic.examenfinal2122.R;
 import dam.gtidic.examenfinal2122.databinding.ActivityAdventureBinding;
 import dam.gtidic.examenfinal2122.usecases.game.math.GameActivityMath;
+import dam.gtidic.examenfinal2122.usecases.game.math.GameActivityMathHard;
+import dam.gtidic.examenfinal2122.usecases.game.math.GameActivityMathMedium;
+import dam.gtidic.examenfinal2122.utils.PreferencesProvider;
 
 public class AdventureActivity extends AppCompatActivity {
 
@@ -63,6 +66,26 @@ public class AdventureActivity extends AppCompatActivity {
                 }
             }
         });
+
+        viewModel.nivellElegit.observe(this, new Observer<Integer>() {
+            @Override
+            public void onChanged(Integer integer) {
+                switch (viewModel.nivellElegit.getValue()){
+                    case 1:
+                        PreferencesProvider.providePreferences().edit().putInt("nivellElegit", 1);
+                        showEasyLevel();
+                        break;
+
+                    case 2:
+                        showMediumLevel();
+                        break;
+
+                    case 3:
+                        showHardLevel();
+                        break;
+                }
+            }
+        });
     }
 
     private void data(){
@@ -73,13 +96,23 @@ public class AdventureActivity extends AppCompatActivity {
             startActivity( new Intent(this, GameActivityMath.class));
     }
 
+    public void showEasyLevel(){
+        startActivity( new Intent(this, GameActivityMath.class));
+    }
+
+    public void showMediumLevel(){
+        startActivity( new Intent(this, GameActivityMathMedium.class));
+    }
+
+    public void showHardLevel(){
+        startActivity( new Intent(this, GameActivityMathHard.class));
+    }
+
 
     private void close(){
         Log.d(this.getClass().getSimpleName(), "...closing()");
         finishAffinity();
     }
-
-
 
 
 }

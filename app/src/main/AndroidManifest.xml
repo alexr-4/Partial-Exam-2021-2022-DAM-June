@@ -29,6 +29,12 @@
             android:name=".usecases.game.math.GameActivityMath"
             android:exported="false" />
         <activity
+            android:name=".usecases.game.math.GameActivityMathHard"
+            android:exported="false" />
+        <activity
+            android:name=".usecases.game.math.GameActivityMathMedium"
+            android:exported="false" />
+        <activity
             android:name=".usecases.adventure.AdventureActivity"
             android:exported="false">
         </activity>

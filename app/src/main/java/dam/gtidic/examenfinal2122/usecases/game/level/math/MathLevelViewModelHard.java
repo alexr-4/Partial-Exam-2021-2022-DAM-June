@@ -10,13 +10,14 @@ import java.util.Objects;
 import dam.gtidic.examenfinal2122.usecases.game.GameViewModel;
 import dam.gtidic.examenfinal2122.usecases.models.MathExprLevel;
 
-public class MathLevelViewModel extends GameViewModel {
+
+public class MathLevelViewModelHard extends GameViewModel {
 
     private final static String TAG = "MathLevelViewModel";
 
     @Override
     protected void setRepo() {
-        this.repository = new MathExprLevelMockRepository();
+        this.repository = new MathExprLevelMockRepositoryHard();
     }
 
     @Override
@@ -25,7 +26,7 @@ public class MathLevelViewModel extends GameViewModel {
             String solution_str = this.userSolution.getValue();
             double solution = Double.parseDouble(solution_str);
 
-            MathExprLevel l = (MathExprLevel) this.level.getValue();
+            MathLevelViewModelHard l = (MathLevelViewModelHard) this.level.getValue();
 
             if (Objects.requireNonNull(l).getSolution() == solution) {
                 Log.d(TAG, "Level passed...");

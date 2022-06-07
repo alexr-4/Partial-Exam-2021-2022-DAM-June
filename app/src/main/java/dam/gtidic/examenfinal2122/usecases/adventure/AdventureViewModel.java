@@ -15,11 +15,15 @@ public class AdventureViewModel extends ViewModel {
 
     public MutableLiveData<String> videsTv;
     public MutableLiveData<Boolean> esPotJugar;
+    public MutableLiveData<Integer> nivellElegit;
+
 
 
     public AdventureViewModel(){
 
         this.esPotJugar = new MutableLiveData<>();
+
+        this.nivellElegit = new MutableLiveData<>();
 
         this.videsTv = new MutableLiveData<>();
 
@@ -50,6 +54,21 @@ public class AdventureViewModel extends ViewModel {
     public void comprovacioJugar(int videsActuals){
         if(videsActuals == 0) this.esPotJugar.setValue(false);
         else this.esPotJugar.setValue(true);
+    }
+
+
+    public void elegitEasy(){
+     this.nivellElegit.setValue(1);
+    }
+
+    public void elegitMedium(){
+        this.nivellElegit.setValue(2);
+
+    }
+
+    public void elegitHard(){
+        this.nivellElegit.setValue(3);
+
     }
 
 

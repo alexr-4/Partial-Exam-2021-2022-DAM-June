@@ -108,6 +108,45 @@
             app:srcCompat="@android:drawable/btn_star"
             app:tint="#F89F00"
             tools:ignore="ImageContrastCheck" />
+
+        <Button
+            android:id="@+id/hardBT"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="hard"
+            android:onClick="@{() -> viewModel.elegitHard()}"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.949"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.317" />
+
+        <Button
+            android:id="@+id/easyBT"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="easy"
+            android:onClick="@{() -> viewModel.elegitEasy()}"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.949"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.499" />
+
+        <Button
+            android:id="@+id/mediumBT"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="medium"
+            android:onClick="@{() -> viewModel.elegitMedium()}"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.949"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.405" />
         <!--- QA: android:onClick="purchaseALive"-->
 
     </androidx.constraintlayout.widget.ConstraintLayout>
