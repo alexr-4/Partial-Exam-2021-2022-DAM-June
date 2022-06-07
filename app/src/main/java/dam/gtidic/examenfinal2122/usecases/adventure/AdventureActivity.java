@@ -29,8 +29,11 @@ public class AdventureActivity extends AppCompatActivity {
     // Private methods
     private void setup(){
         binding = ActivityAdventureBinding.inflate(getLayoutInflater());
+
         setContentView(binding.getRoot());
+
         viewModel = new ViewModelProvider(this).get(AdventureViewModel.class);
+
         binding.setViewModel(viewModel);
         binding.setLifecycleOwner(this);
 
@@ -48,7 +51,7 @@ public class AdventureActivity extends AppCompatActivity {
         Log.d(this.getClass().getSimpleName(),"...data() ");
     }
 
-    private void showMathAdventure(View view){
+    public void showMathAdventure(View view){
             startActivity( new Intent(this, GameActivityMath.class));
     }
 
@@ -57,5 +60,7 @@ public class AdventureActivity extends AppCompatActivity {
         Log.d(this.getClass().getSimpleName(), "...closing()");
         finishAffinity();
     }
+
+
 
 }

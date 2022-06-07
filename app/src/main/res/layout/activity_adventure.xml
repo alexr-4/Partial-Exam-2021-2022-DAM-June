@@ -5,7 +5,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <data>
-        <import type="android.view.View" />
+        <import type="dam.gtidic.examenfinal2122.usecases.adventure.AdventureViewModel" />
         <variable
             name="viewModel"
             type="dam.gtidic.examenfinal2122.usecases.adventure.AdventureViewModel" />
