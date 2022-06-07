@@ -35,6 +35,7 @@ public class LauncherActivity extends AppCompatActivity {
 
     private void showHome(){
         startActivity(new Intent(this, AdventureActivity.class));
+        PreferencesProvider.init(this);
     }
 
 }
